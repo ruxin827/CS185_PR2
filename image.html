@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial scale=1">
+        <style>
+            .group{
+            display: flex;
+            flex-flow: row nowrap; /* Align on the same line */
+  
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+
+            .topnav{
+                overflow: hidden;
+                background-color: black;
+            }
+
+            .topnav a{
+                height: 16px;
+                float: left;
+                color: white;
+                text-align: center;
+                padding: 14px 18px;
+                font-size: 16px;
+                text-decoration: none;
+            }
+
+            .topnav a:hover{
+                background-color: #e8e8e8;
+                color: black;
+            }
+
+            .topnav a.active{
+                background-color:cornflowerblue;
+                color: white;
+            }
+
+            #zoomImg{
+                display: none;
+            }
+
+            .zoomImg img {
+                animation-name: zoom;
+                display: block;
+                width: 50%;
+                margin-left: auto;
+                margin-top: auto;
+                margin-right: auto;
+                margin-bottom: auto;
+            }
+
+            #topButton{
+                display: none;
+                position: fixed;
+                bottom: 20px;
+                right: 30px;
+                font-size: 20px;
+                outline: none;
+                border: none;
+                background-color: cornflowerblue;
+                color: white;
+                cursor: pointer;
+                padding: 10px;
+            }
+
+            #topButton:hover{
+                background-color: darkgray;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="topnav">
+            <a href="index.html">Text</a>
+            <a class="active" href="image.html">Image</a>
+            <a href="video.html">Video</a>
+            <a href="table.html">Table</a>
+            <a href="email.html">Email</a>
+        </div>
+
+        <a name="top"></a>
+
+        <div style='position: fixed' id='zoomImg'>
+        <div class='zoomImg' id='zoomImage'><img id='largeImg' /></div>
+        </div>
+
+        <button onclick="topFunction()" id="topButton" title="top">Back to Top</button>
+
+        <div class="group">
+            <div><td><img onclick='showlargeImg(this)' src="1.jpg" width=80%></td></div>
+            <div><td><img onclick='showlargeImg(this)' src="2.jpg" width=80%></td></div>
+            <div><td><img onclick='showlargeImg(this)' src="3.jpg" width=80%></td></div>
+            <div><td><img onclick='showlargeImg(this)' src="4.jpg" width=80%></td></div>
+        </div>
+        <div class="group">
+            <div><td><img onclick='showlargeImg(this)' src="5.jpg" width=80%></td></div>
+            <div><td><img onclick='showlargeImg(this)' src="6.jpg" width=80%></td></div>
+            <div><td><img onclick='showlargeImg(this)' src="7.png" width=80%></td></div>
+            <div><td><img onclick='showlargeImg(this)' src="8.png" width=80%></td></div>
+        </div>
+        <div class="group">
+            <div><td><img onclick='showlargeImg(this)' src="9.png" width=80%></td></div>
+            <div><td><img onclick='showlargeImg(this)' src="10.png" width=80%></td></div>
+            <div><td><img onclick='showlargeImg(this)' src="11.png" width=80%></td></div>
+            <div><td><img onclick='showlargeImg(this)' src="12.png" width=80%></td></div>
+        </div>
+
+    <script>
+        function showlargeImg(e) {
+            zoomImg.style.display = 'block';
+            largeImg.src = e.src;
+          }
+  
+            largeImg.onclick = function() {
+                zoomImg.style.display = 'none';
+          }
+    </script>
+  
+    <script>
+        var button = document.getElementById("topButton");
+        window.onscroll = function() {scrollFunction()};
+                
+        function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+        }
+                
+        function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    </body>
+</html>

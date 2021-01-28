@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial scale=1">
+        <style>
+            table, th, td{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th{
+                text-align: left;
+            }
+
+            .topnav{
+                overflow: hidden;
+                background-color: black;
+            }
+
+            .topnav a{
+                height: 16px;
+                float: left;
+                color: white;
+                text-align: center;
+                padding: 14px 18px;
+                font-size: 16px;
+                text-decoration: none;
+            }
+
+            .topnav a:hover{
+                background-color: #e8e8e8;
+                color: black;
+            }
+
+            .topnav a.active{
+                background-color:cornflowerblue;
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="topnav">
+            <a href="index.html">Text</a>
+            <a href="image.html">Image</a>
+            <a href="video.html">Video</a>
+            <a class="active" href="table.html">Table</a>
+            <a href="email.html">Email</a>
+        </div>
+
+        <h2>Book Rocommendations</h2>
+        <table style="width:100%">
+            <tr>
+                <th>Name</th>
+                <th>Details</th>
+                <th>Published Year</th>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="https://en.wikipedia.org/wiki/Brave_New_World">Brave New World</a>
+                </td>
+                <td>Brave New World is a dystopian social science fiction novel by English author Aldous Huxley, written in 1931 and published in 1932. (from Wikipedia)</td>
+                <td>1932</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="https://en.wikipedia.org/wiki/Nineteen_Eighty-Four">Nineteen Eighty-Four</a>
+                </td>
+                <td>Nineteen Eighty-Four: A Novel, often published as 1984, is a dystopian social science fiction novel by English novelist George Orwell. (from Wikipedia)</td>
+                <td>1949</td>
+            </tr>
+
+        </table>
+    </body>
+</html>
