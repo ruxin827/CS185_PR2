@@ -1,0 +1,60 @@
+<!---work with Xinyu(Alain Liu)-->
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial scale=1">
+        <style>
+            .topnav{
+                overflow: hidden;
+                background-color: black;
+            }
+
+            .topnav a{
+                height: 16px;
+                float: left;
+                color: white;
+                text-align: center;
+                padding: 14px 18px;
+                font-size: 16px;
+                text-decoration: none;
+            }
+
+            .topnav a:hover{
+                background-color: #e8e8e8;
+                color: black;
+            }
+
+            .topnav a.active{
+                background-color:cornflowerblue;
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="topnav">
+            <a class="active" href="index.html">Text</a>
+            <a href="image.html">Image</a>
+            <a href="video.html">Video</a>
+            <a href="table.html">Table</a>
+            <a href="email.html">Email</a>
+        </div>
+
+        <div style="padding-left:20px">
+            <form>
+                <label for="first_name">First Name:</label><br>
+                <input type="text" id="first_name" name="first_name" value="Ruxin"><br>
+                <label for="last_name">Last Name:</label><br>
+                <input type="text" id="last_name" name="last_name" value="Zhang"><br>
+            </form>
+            <form>
+                <p>Favorite Movie</p>
+                <input type="radio" name="Favorite Movie" value="Avengers" checked>Avengers<br>
+                <input type="radio" name="Favorite Movie" value="Iron Man">Iron Man<br>
+                <input type="radio" name="Favorite Movie" value="Captain America">Captain America<br>
+                <input type="submit" value="Done">
+            </form>
+
+        </div>
+    </body>
+</html>

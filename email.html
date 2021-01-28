@@ -1,0 +1,81 @@
+<html>
+<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    
+    table, th, td{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th{
+        text-align: left;
+    }
+    
+    .topnav{
+        overflow: hidden;
+        background-color: black;
+    }
+
+    .topnav a{
+        height: 16px;
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 14px 18px;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    .topnav a:hover{
+        background-color: #e8e8e8;
+        color: black;
+    }
+
+    .topnav a.active{
+        background-color:cornflowerblue;
+        color: white;
+    }
+    </style>
+
+    <script>
+    function checkEmail()
+    {
+        var userInput = document.getElementById("email").value;
+        if(userInput.indexOf("@") > 0){
+         if(userInput.indexOf(".com") > 0 || userInput.indexOf(".edu") > 0){
+            check = true;
+        }}else{
+            check = false;
+        }
+
+        if(check==true){
+            document.getElementById("temp").innerHTML="Email successfully recorded.";
+        }else{
+            document.getElementById("temp").innerHTML="Invalid email address.";
+        }
+            
+    }
+    </script>
+    </head>
+    <body>
+    
+    <div class="topnav">
+        <a href="index.html">Text</a>
+        <a href="image.html">Image</a>
+        <a href="video.html">Video</a>
+        <a href="table.html">Table</a>
+        <a class="active" href="email.html">Email</a>
+    </div>
+
+    
+    <form name="form"  method="post">
+        <label for="email address">Enter Email Address:</label><br>
+        
+        <input type="text" id="email" name="email"><br>
+        <input type="button" value = "Submit" onclick="checkEmail()">
+        </form>
+        <p id="temp"></p>
+
+</body>
+</html>
